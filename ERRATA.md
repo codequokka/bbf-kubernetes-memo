@@ -5,6 +5,10 @@
 ### 1.3
 - hello-serverコンテナのレスポンスの文字列が異なる
 ```bash
-❯ curl localhost:8080
-Hello, world!%
+$ curl localhost:8080
+Hello, world!
+```
+```bash
+$ curl localhost:8080
+Hello, world! Let's learn Kubernetes!
 ```
