@@ -1,4 +1,7 @@
 # TODO
+## Setup
+- [ ] READMEを正確に書く
+
 ## Chapter-01
 - [ ] buildしたイメージをghcrにpushする
 
