@@ -4,13 +4,13 @@ metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
       {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"app":"myapp"},"name":"myapp","namespace":"default"},"spec":{"containers":[{"image":"blux2/hello-server:1.0","name":"hello-server","ports":[{"containerPort":8080}]}]}}
-  creationTimestamp: "2024-04-30T02:15:31Z"
+  creationTimestamp: "2024-05-01T04:43:18Z"
   labels:
     app: myapp
   name: myapp
   namespace: default
-  resourceVersion: "808"
-  uid: 57b2f856-e049-45a9-bbb6-ed31f5c40ab0
+  resourceVersion: "696"
+  uid: 6a8b1b2f-e679-4671-a4ef-acb3ffe7815e
 spec:
   containers:
   - image: blux2/hello-server:1.0
@@ -24,7 +24,7 @@ spec:
     terminationMessagePolicy: File
     volumeMounts:
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-      name: kube-api-access-r84hb
+      name: kube-api-access-25nn2
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
@@ -47,7 +47,7 @@ spec:
     operator: Exists
     tolerationSeconds: 300
   volumes:
-  - name: kube-api-access-r84hb
+  - name: kube-api-access-25nn2
     projected:
       defaultMode: 420
       sources:
@@ -68,27 +68,27 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2024-04-30T02:15:38Z"
+    lastTransitionTime: "2024-05-01T04:43:25Z"
     status: "True"
     type: PodReadyToStartContainers
   - lastProbeTime: null
-    lastTransitionTime: "2024-04-30T02:15:31Z"
+    lastTransitionTime: "2024-05-01T04:43:18Z"
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2024-04-30T02:15:38Z"
+    lastTransitionTime: "2024-05-01T04:43:25Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2024-04-30T02:15:38Z"
+    lastTransitionTime: "2024-05-01T04:43:25Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
-    lastTransitionTime: "2024-04-30T02:15:31Z"
+    lastTransitionTime: "2024-05-01T04:43:18Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: containerd://cb66f87a4c9d08c1ce4dc1f756cb824fa917c816451f50f5dff7fd4a2f786c75
+  - containerID: containerd://23bca91efb75384512393d6736dadb341de55db6f12587eb8d703c0be38b3043
     image: docker.io/blux2/hello-server:1.0
     imageID: docker.io/blux2/hello-server@sha256:35ab584cbe96a15ad1fb6212824b3220935d6ac9d25b3703ba259973fac5697d
     lastState: {}
@@ -98,7 +98,7 @@ status:
     started: true
     state:
       running:
-        startedAt: "2024-04-30T02:15:37Z"
+        startedAt: "2024-05-01T04:43:25Z"
   hostIP: 172.18.0.2
   hostIPs:
   - ip: 172.18.0.2
@@ -107,4 +107,4 @@ status:
   podIPs:
   - ip: 10.244.0.5
   qosClass: BestEffort
-  startTime: "2024-04-30T02:15:31Z"
+  startTime: "2024-05-01T04:43:18Z"
