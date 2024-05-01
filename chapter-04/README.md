@@ -18,14 +18,14 @@ kubectl cluster-info --context kind-kind
 Thanks for using kind! 😊
 
 ❯ kubectl get nodes
-NAME                 STATUS     ROLES           AGE   VERSION
-kind-control-plane   NotReady   control-plane   28s   v1.29.0
+NAME                 STATUS   ROLES           AGE   VERSION
+kind-control-plane   Ready    control-plane   22s   v1.29.0
 
 ❯ kind get clusters
 kind
 ```
 
-## 4.2.3
+## 4.2.2
 ```bash
 ❯ kubectl get pod --namespace default
 No resources found in default namespace.
