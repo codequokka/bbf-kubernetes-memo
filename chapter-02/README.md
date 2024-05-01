@@ -35,8 +35,8 @@ kindest/node   v1.29.0   dcd9d3cef648   4 months ago   912MB
 kind
 
 ❯ kubectl cluster-info --context kind-kind
-Kubernetes control plane is running at https://127.0.0.1:32777
-CoreDNS is running at https://127.0.0.1:32777/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+Kubernetes control plane is running at https://127.0.0.1:35499
+CoreDNS is running at https://127.0.0.1:35499/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 
