@@ -1,13 +1,14 @@
 # Setup
 
+
 ## VM作成
 ```Powershell
-PS C:\Users\nbchk\work\bbf-kubernetes> vagrant.exe up --no-provision
+PS C:\Users\nbchk\work\bbf-kubernetes> vagrant.exe up
 Bringing machine 'bbf-kubernetes' up with 'virtualbox' provider...
 ==> bbf-kubernetes: Importing base box 'generic/ubuntu2204'...
 ==> bbf-kubernetes: Matching MAC address for NAT networking...
 ==> bbf-kubernetes: Checking if box 'generic/ubuntu2204' version '4.3.12' is up to date...
-==> bbf-kubernetes: Setting the name of the VM: bbf-kubernetes_bbf-kubernetes_1714599300014_89334
+==> bbf-kubernetes: Setting the name of the VM: bbf-kubernetes_bbf-kubernetes_1714952788117_49065
 ==> bbf-kubernetes: Clearing any previously set network interfaces...
 ==> bbf-kubernetes: Preparing network interfaces based on configuration...
     bbf-kubernetes: Adapter 1: nat
@@ -20,6 +21,10 @@ Bringing machine 'bbf-kubernetes' up with 'virtualbox' provider...
     bbf-kubernetes: SSH address: 127.0.0.1:2222
     bbf-kubernetes: SSH username: vagrant
     bbf-kubernetes: SSH auth method: private key
+    bbf-kubernetes: Warning: Connection aborted. Retrying...
+    bbf-kubernetes: Warning: Connection reset. Retrying...
+    bbf-kubernetes: Warning: Connection aborted. Retrying...
+    bbf-kubernetes: Warning: Connection reset. Retrying...
     bbf-kubernetes: Warning: Connection reset. Retrying...
     bbf-kubernetes: Warning: Connection aborted. Retrying...
     bbf-kubernetes: Warning: Connection reset. Retrying...
@@ -28,7 +33,6 @@ Bringing machine 'bbf-kubernetes' up with 'virtualbox' provider...
     bbf-kubernetes: Warning: Connection aborted. Retrying...
     bbf-kubernetes: Warning: Connection reset. Retrying...
     bbf-kubernetes: Warning: Connection aborted. Retrying...
-    bbf-kubernetes: Warning: Connection aborted. Retrying...
     bbf-kubernetes: Warning: Connection reset. Retrying...
     bbf-kubernetes: Warning: Connection aborted. Retrying...
     bbf-kubernetes: Warning: Connection reset. Retrying...
@@ -38,9 +42,6 @@ Bringing machine 'bbf-kubernetes' up with 'virtualbox' provider...
     bbf-kubernetes: Warning: Connection reset. Retrying...
     bbf-kubernetes: Warning: Connection aborted. Retrying...
     bbf-kubernetes: Warning: Connection reset. Retrying...
-    bbf-kubernetes: Warning: Connection aborted. Retrying...
-    bbf-kubernetes: Warning: Connection reset. Retrying...
-    bbf-kubernetes: Warning: Remote connection disconnect. Retrying...
     bbf-kubernetes: Warning: Connection aborted. Retrying...
     bbf-kubernetes: Warning: Connection reset. Retrying...
     bbf-kubernetes: Warning: Connection aborted. Retrying...
@@ -58,23 +59,6 @@ Bringing machine 'bbf-kubernetes' up with 'virtualbox' provider...
     bbf-kubernetes: VirtualBox Version: 7.0
 ==> bbf-kubernetes: Setting hostname...
 ==> bbf-kubernetes: Configuring and enabling network interfaces...
-==> bbf-kubernetes: Machine not provisioned because `--no-provision` is specified.
-
-PS C:\Users\nbchk\work\bbf-kubernetes> vagrant.exe status
-Current machine states:
-
-bbf-kubernetes            running (virtualbox)
-
-The VM is running. To stop this VM, you can run `vagrant halt` to
-shut it down forcefully, or you can run `vagrant suspend` to simply
-suspend the virtual machine. In either case, to restart it again,
-simply run `vagrant up`.
-```
-
-
-## Dockerインストール
-```Powershell
-PS C:\Users\nbchk\work\bbf-kubernetes> vagrant.exe provision
 ==> bbf-kubernetes: Running provisioner: shell...
     bbf-kubernetes: Running: inline script
     bbf-kubernetes: Hit:1 https://mirrors.edge.kernel.org/ubuntu jammy InRelease
@@ -97,11 +81,11 @@ PS C:\Users\nbchk\work\bbf-kubernetes> vagrant.exe provision
     bbf-kubernetes: Get:18 https://mirrors.edge.kernel.org/ubuntu jammy-security/main Translation-en [243 kB]
     bbf-kubernetes: Get:19 https://mirrors.edge.kernel.org/ubuntu jammy-security/restricted amd64 Packages [1,773 kB]
     bbf-kubernetes: Get:20 https://mirrors.edge.kernel.org/ubuntu jammy-security/restricted Translation-en [300 kB]
-    bbf-kubernetes: Get:21 https://mirrors.edge.kernel.org/ubuntu jammy-security/universe amd64 Packages [849 kB]
+    bbf-kubernetes: Get:21 https://mirrors.edge.kernel.org/ubuntu jammy-security/universe amd64 Packages [848 kB]
     bbf-kubernetes: Get:22 https://mirrors.edge.kernel.org/ubuntu jammy-security/universe Translation-en [163 kB]
     bbf-kubernetes: Get:23 https://mirrors.edge.kernel.org/ubuntu jammy-security/multiverse amd64 Packages [37.2 kB]
     bbf-kubernetes: Get:24 https://mirrors.edge.kernel.org/ubuntu jammy-security/multiverse Translation-en [7,588 B]
-    bbf-kubernetes: Fetched 10.7 MB in 28s (375 kB/s)
+    bbf-kubernetes: Fetched 10.7 MB in 18s (577 kB/s)
     bbf-kubernetes: Reading package lists...
     bbf-kubernetes: Reading package lists...
     bbf-kubernetes: Building dependency tree...
@@ -110,13 +94,13 @@ PS C:\Users\nbchk\work\bbf-kubernetes> vagrant.exe provision
     bbf-kubernetes: ca-certificates set to manually installed.
     bbf-kubernetes: The following packages will be upgraded:
     bbf-kubernetes:   curl libcurl4
-    bbf-kubernetes: 2 upgraded, 0 newly installed, 0 to remove and 106 not upgraded.
+    bbf-kubernetes: 2 upgraded, 0 newly installed, 0 to remove and 108 not upgraded.
     bbf-kubernetes: Need to get 484 kB of archives.
     bbf-kubernetes: After this operation, 0 B of additional disk space will be used.
     bbf-kubernetes: Get:1 https://mirrors.edge.kernel.org/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.16 [194 kB]
     bbf-kubernetes: Get:2 https://mirrors.edge.kernel.org/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.16 [290 kB]
     bbf-kubernetes: dpkg-preconfigure: unable to re-open stdin: No such file or directory
-    bbf-kubernetes: Fetched 484 kB in 2s (283 kB/s)
+    bbf-kubernetes: Fetched 484 kB in 2s (308 kB/s)
 (Reading database ... 76324 files and directories currently installed.)
     bbf-kubernetes: Preparing to unpack .../curl_7.81.0-1ubuntu1.16_amd64.deb ...
     bbf-kubernetes: Unpacking curl (7.81.0-1ubuntu1.16) over (7.81.0-1ubuntu1.15) ...
@@ -139,10 +123,10 @@ PS C:\Users\nbchk\work\bbf-kubernetes> vagrant.exe provision
     bbf-kubernetes: Get:1 https://download.docker.com/linux/ubuntu jammy InRelease [48.8 kB]
     bbf-kubernetes: Get:2 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages [31.5 kB]
     bbf-kubernetes: Hit:3 https://mirrors.edge.kernel.org/ubuntu jammy InRelease
-    bbf-kubernetes: Hit:4 https://mirrors.edge.kernel.org/ubuntu jammy-updates InRelease
+    bbf-kubernetes: Get:4 https://mirrors.edge.kernel.org/ubuntu jammy-updates InRelease [119 kB]
     bbf-kubernetes: Hit:5 https://mirrors.edge.kernel.org/ubuntu jammy-backports InRelease
-    bbf-kubernetes: Hit:6 https://mirrors.edge.kernel.org/ubuntu jammy-security InRelease
-    bbf-kubernetes: Fetched 80.3 kB in 1s (70.6 kB/s)
+    bbf-kubernetes: Get:6 https://mirrors.edge.kernel.org/ubuntu jammy-security InRelease [110 kB]
+    bbf-kubernetes: Fetched 309 kB in 2s (193 kB/s)
     bbf-kubernetes: Reading package lists...
     bbf-kubernetes: Reading package lists...
     bbf-kubernetes: Building dependency tree...
@@ -155,7 +139,7 @@ PS C:\Users\nbchk\work\bbf-kubernetes> vagrant.exe provision
     bbf-kubernetes:   containerd.io docker-buildx-plugin docker-ce docker-ce-cli
     bbf-kubernetes:   docker-ce-rootless-extras docker-compose-plugin libltdl7 libslirp0 pigz
     bbf-kubernetes:   slirp4netns
-    bbf-kubernetes: 0 upgraded, 10 newly installed, 0 to remove and 106 not upgraded.
+    bbf-kubernetes: 0 upgraded, 10 newly installed, 0 to remove and 108 not upgraded.
     bbf-kubernetes: Need to get 121 MB of archives.
     bbf-kubernetes: After this operation, 434 MB of additional disk space will be used.
     bbf-kubernetes: Get:1 https://download.docker.com/linux/ubuntu jammy/stable amd64 containerd.io amd64 1.6.31-1 [29.8 MB]
@@ -169,7 +153,7 @@ PS C:\Users\nbchk\work\bbf-kubernetes> vagrant.exe provision
     bbf-kubernetes: Get:9 https://download.docker.com/linux/ubuntu jammy/stable amd64 docker-ce-rootless-extras amd64 5:26.1.1-1~ubuntu.22.04~jammy [9,321 kB]
     bbf-kubernetes: Get:10 https://download.docker.com/linux/ubuntu jammy/stable amd64 docker-compose-plugin amd64 2.27.0-1~ubuntu.22.04~jammy [12.5 MB]
     bbf-kubernetes: dpkg-preconfigure: unable to re-open stdin: No such file or directory
-    bbf-kubernetes: Fetched 121 MB in 19s (6,384 kB/s)
+    bbf-kubernetes: Fetched 121 MB in 19s (6,371 kB/s)
     bbf-kubernetes: Selecting previously unselected package pigz.
 (Reading database ... 76324 files and directories currently installed.)
     bbf-kubernetes: Preparing to unpack .../0-pigz_2.6-1_amd64.deb ...
@@ -226,11 +210,21 @@ PS C:\Users\nbchk\work\bbf-kubernetes> vagrant.exe provision
     bbf-kubernetes: No user sessions are running outdated binaries.
     bbf-kubernetes:
     bbf-kubernetes: No VM guests are running outdated hypervisor (qemu) binaries on this host.
+    bbf-kubernetes:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+    bbf-kubernetes:                                  Dload  Upload   Total   Spent    Left  Speed
+100    80  100    80    0     0    182      0 --:--:-- --:--:-- --:--:--   182
+100    75  100    75    0     0     80      0 --:--:-- --:--:-- --:--:--    80
+100 65.7M  100 65.7M    0     0  5642k      0  0:00:11  0:00:11 --:--:-- 6113k
 
-PS C:\Users\nbchk\work\bbf-kubernetes> vagrant.exe provision
-==> bbf-kubernetes: Running provisioner: shell...
-    bbf-kubernetes: Running: inline script
-    bbf-kubernetes: Docker is already installed.
+PS C:\Users\nbchk\work\bbf-kubernetes> vagrant.exe status
+Current machine states:
+
+bbf-kubernetes            running (virtualbox)
+
+The VM is running. To stop this VM, you can run `vagrant halt` to
+shut it down forcefully, or you can run `vagrant suspend` to simply
+suspend the virtual machine. In either case, to restart it again,
+simply run `vagrant up`.
 ```
 
 
@@ -256,4 +250,13 @@ Host bbf-kubernetes
 ```powershell
 PS C:\Users\nbchk\work\bbf-kubernetes> ssh bbf-kubernetes
 vagrant@bbf-kubernetes:~$
+```
+
+## 必要なコマンドのインストール確認
+```powershell
+❯ goss --gossfile ./setup/tests/goss.yaml validate
+...
+
+Total Duration: 0.106s
+Count: 3, Failed: 0, Skipped: 0
 ```

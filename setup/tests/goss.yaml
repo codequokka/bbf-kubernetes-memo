@@ -1,0 +1,13 @@
+---
+command:
+  docker:
+    exec: docker
+    exit-status: 0
+
+  kind:
+    exec: kind
+    exit-status: 0
+
+  kubectl:
+    exec: kubectl
+    exit-status: 0
