@@ -25,7 +25,7 @@ You can now use your cluster with:
 
 kubectl cluster-info --context kind-kind
 
-Have a nice day! 👋
+Thanks for using kind! 😊
 
 ❯ docker images kindest/node
 REPOSITORY     TAG       IMAGE ID       CREATED        SIZE
@@ -34,16 +34,13 @@ kindest/node   v1.29.0   dcd9d3cef648   4 months ago   912MB
 ❯ kind get clusters
 kind
 
-❯ kubectl cluster-info --context kind-kind
-Kubernetes control plane is running at https://127.0.0.1:35499
-CoreDNS is running at https://127.0.0.1:35499/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+❯ docker images kindest/node
+REPOSITORY     TAG       IMAGE ID       CREATED        SIZE
+kindest/node   v1.29.0   dcd9d3cef648   4 months ago   912MB
 
-To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
-
-❯ kubectl version
-Client Version: v1.30.0
-Kustomize Version: v5.0.4-0.20230601165947-6ce0bf390ce3
-Server Version: v1.29.0
+❯ kubectl get nodes
+NAME                 STATUS   ROLES           AGE     VERSION
+kind-control-plane   Ready    control-plane   3m38s   v1.29.0
 
 ❯ kind delete cluster
 Deleting cluster "kind" ...
